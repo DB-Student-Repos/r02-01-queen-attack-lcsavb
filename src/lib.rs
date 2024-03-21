@@ -32,14 +32,9 @@ impl Queen {
     }
 
     pub fn can_attack(&self, other: &Queen) -> bool {
-        if self.position.rank == other.position.rank
-            || self.position.file == other.position.file
-            || (self.position.rank - other.position.rank).abs()
-                == (self.position.file - other.position.file).abs()
-        {
-            true
-        } else {
-            false
-        }
+        self.position.rank == other.position.rank
+        || self.position.file == other.position.file
+        || (self.position.rank - other.position.rank).abs()
+            == (self.position.file - other.position.file).abs()
     }
 }
